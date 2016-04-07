@@ -10,7 +10,7 @@ MAINTAINER Marcus André <hello@marcusandre.de>
 # Pkg
 #
 
-ENV VERSION 1.1.1-r0
+ENV VERSION 1.2.4-r0
 ADD config/repositories /etc/apk/repositories
 
 #
