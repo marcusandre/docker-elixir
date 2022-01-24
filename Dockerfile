@@ -3,24 +3,18 @@
 # Elixir
 #
 
-FROM alpine:3.2
+FROM alpine:latest
 MAINTAINER Marcus André <hello@marcusandre.de>
-
-#
-# Pkg
-#
-
-ENV VERSION 1.2.4-r0
-ADD config/repositories /etc/apk/repositories
 
 #
 # System
 #
 
 RUN echo "ipv6" >> /etc/modules
+
 RUN apk update \
   && apk upgrade \
-  && apk add --update ncurses-libs elixir=$VERSION \
+  && apk add --update elixir \
   && rm -rf /var/cache/apk/*
 
 #
